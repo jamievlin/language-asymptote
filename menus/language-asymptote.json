@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Compile Asymptote",
+        "command" : "language-asymptote:compile"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "language-asymptote",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "language-asymptote:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

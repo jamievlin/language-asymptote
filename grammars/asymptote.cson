@@ -1,0 +1,92 @@
+'scopeName': 'source.asymptote'
+'name': 'Asymptote'
+'fileTypes': ['asy']
+
+'patterns': [
+    {
+        'match': '//.*$'
+        'name':'comment.line.double-slash'
+    },
+    {
+        'match' : '\\b(real|bool|bool3|int|pair|string|path|guide|pen|Label|picture|transform|void)\\b'
+        'name' : 'storage.type'
+    },
+    {
+        'match' : '\\b(const|static|explicit|struct|typedef)\\b'
+        'name' : 'storage.modifier'
+    },
+    {
+        'begin' : '/\\*'
+        'end' : '\\*/'
+        'name' : 'comment.block'
+    },
+    {
+        'begin' : '"'
+        'end' : '"'
+        'captures' :
+            {
+                '1' : 'string.qutoed.double'
+                'end' : 'string.quoted.double'
+            }
+        'patterns' :
+            [
+                {
+                    'include' : 'text.tex.latex'
+                }
+            ]
+
+    },
+    {
+        'match' : '\'.*?\''
+        'name' : 'string.quoted.single'
+    },
+    {
+        'match' : '\\b(if|while|else|for|var|do|break|continue|return|abort|exit)\\b'
+        'name' : 'keyword.control'
+    },
+    {
+        'match' : '-|\\+|\\*|/|%'
+        'name' : 'keyword.operator' # arithmihic and modulo
+    },
+    {
+        'match' :'==|!=|>|>=|<=|<'
+        'name' : 'keyword.operator' # arithmihic and modulo
+    },
+    {
+        #'match' : '!|&&|&|^'
+        #'name' : 'keyword.operator'
+    },
+    {
+        'match' : '\\b(import|include|as)\\b'
+        'name' : 'keyword.other'
+    },
+    {
+        'match' : '\\b(draw|label|fill|clip|dot|unitsize)\\b'
+        'name' : 'support.function'
+    },
+    {
+        'match' : '\\b(path|pen|guide)\\b'
+        'name' : 'support.class'
+    },
+    {
+        'match' : '\\b(pi|e)\\b'
+        'name' : 'constant.language'
+    },
+    {
+        'match' : '\\b(pale|light|medium|heavy|deep|dark)?(red|green|blue|gray|cyan|magenta|yellow)\\b'
+        'name' : 'constant.language'
+    },
+    {
+        'match' :
+            '\\b(pink|olive|black|white|orange|fuchsia|chartreuse|springgreen|purple|royalblue|Cyan|Magenta|Yellow|Black)\\b'
+        'name' : 'constant.language'
+    },
+    {
+        'match' : '\\b(\\d*)(\\.?)\\d+'
+        'name' : 'constant.numeric'
+    }
+    {
+        'match' : '\\b(cycle)\\b'
+        'name' : 'keyword.other'
+    }
+]

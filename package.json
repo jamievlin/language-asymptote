@@ -1,0 +1,20 @@
+{
+  "name": "language-asymptote",
+  "main": "./lib/language-asymptote",
+  "version": "0.1.0",
+  "description": "Syntax Highlighter for Asymptote",
+  "keywords": [
+      "asymptote",
+      "vector"
+  ],
+  "activationCommands": {
+    "atom-workspace": "language-asymptote:toggle"
+  },
+  "repository": "https://github.com/atom/language-asymptote",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}
