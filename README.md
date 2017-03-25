@@ -20,6 +20,10 @@ First of all, Atom is necessary for Installation. To install, clone this reposit
 
 As of right now, only me (Supakorn Rassameemasmuang) is contribuiting to this project.
 
+## Special Thanks
+
+Dr. John Bowman, Dr. Andy Hammerlindl and Dr. Tom Prince, and other students for development of the original Asymptote language. The full credits can be seen at http://asymptote.sourceforge.net/.
+
 ## License
 
 Copyright (c) 2017 Supakorn Rassameemasmuang
