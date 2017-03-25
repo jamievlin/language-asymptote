@@ -4,7 +4,7 @@ Asymptote is a powerful C-based Vector Graphics Language that can be integrated 
 
 Here are an example of the syntax highlighter in action:
 
-
+![Screenshot 1](https://github.com/supakorn-ras/language-asymptote/raw/master/images/demo1.png)
 
 ## Motivation
 
@@ -16,7 +16,7 @@ First of all, Atom is necessary for Installation. To install, clone this reposit
 
 ## Contributors
 
-    As of right now, only me (Supakorn Rassameemasmuang) is contribuiting to this project.
+As of right now, only me (Supakorn Rassameemasmuang) is contribuiting to this project.
 
 ## License
 
