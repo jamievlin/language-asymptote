@@ -6,6 +6,8 @@ Here are an example of the syntax highlighter in action:
 
 ![Screenshot 1](https://github.com/supakorn-ras/language-asymptote/raw/master/images/demo1.png)
 
+The official website of Asymptote is at http://asymptote.sourceforge.net/.
+
 ## Motivation
 
 The idea for Asymptote syntax highlighter was conceived during one of my study sessions. I was working for an assignment for Honours Calculus 2, and I needed a way to draw images digitally on LaTeX files since my drawing skills weren't good. So, I discovered Asymptote, which is a powerful vector graphics language (which I found easier to use than TikZ), however there weren't any language packages for Atom at the moment, and I found that managing asy documents is difficult due to lack of keyword emphasizing. So I've developed this package to help mitigate this difficulty.
