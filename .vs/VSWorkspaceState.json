@@ -1,6 +1,15 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\grammars",
+    "\\images",
+    "\\keymaps",
+    "\\lib",
+    "\\menus",
+    "\\spec",
+    "\\styles",
+    "\\test_asy_files"
   ],
+  "SelectedNode": "\\lib\\language-asymptote.js",
   "PreviewInSolutionExplorer": false
 }
