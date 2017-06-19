@@ -28,4 +28,4 @@ Dr. John Bowman, Dr. Andy Hammerlindl and Dr. Tom Prince, and other students for
 
 Copyright (c) 2017 Supakorn Rassameemasmuang
 
-See LICENSE.md for license.
+See LICENSE.md for license. This project uses derivative code built from Asymptote, which can be retrieved under https://github.com/vectorgraphics/asymptote.
