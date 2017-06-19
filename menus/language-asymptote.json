@@ -17,6 +17,10 @@
             {
               "label": "Toggle",
               "command": "language-asymptote:toggle"
+          },
+            {
+                "label": "Compile Asymptote",
+                "command": "language-asymptote:compile"
             }
           ]
         }

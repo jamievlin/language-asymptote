@@ -1,3 +1,19 @@
+#     asymptote.cson - Syntax Hightling compoenent for asymptote
+#     Copyright (C) 2017 Supakorn Rassameemasmuang
+#
+#     This program is free software: you can redistribute it and/or modify
+#     it under the terms of the GNU General Public License as published by
+#     the Free Software Foundation, either version 3 of the License, or
+#     (at your option) any later version.
+#
+#     This program is distributed in the hope that it will be useful,
+#     but WITHOUT ANY WARRANTY; without even the implied warranty of
+#     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#     GNU General Public License for more details.
+#
+#     You should have received a copy of the GNU General Public License
+#     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 'scopeName': 'source.asymptote'
 'name': 'Asymptote'
 'fileTypes': ['asy']
@@ -8,7 +24,15 @@
         'name':'comment.line.double-slash'
     },
     {
-        'match' : '\\b(real|bool|bool3|int|pair|string|path|guide|pen|Label|picture|transform|void)\\b'
+        'match' : '\\b(void|bool|int|real|string)\\b'
+        'name' : 'storage.type'
+    },
+    {
+        'match' : '\\b(pair|triple|transform|guide|path|pen|frame)\\b'
+        'name' : 'storage.type'
+    },
+    {
+        'match' : '\\b(picture)\\b'
         'name' : 'storage.type'
     },
     {
@@ -41,7 +65,15 @@
         'name' : 'string.quoted.single'
     },
     {
-        'match' : '\\b(if|while|else|for|var|do|break|continue|return|abort|exit)\\b'
+        'match' : '\\b(if|else)\\b'
+        'name' : 'keyword.control'
+    },
+    {
+        'match' : '\\b(while|for|do)\\b'
+        'name' : 'keyword.control'
+    },
+    {
+        'match' : '\\b(break|return|continue|unravel)\\b'
         'name' : 'keyword.control'
     },
     {
@@ -53,11 +85,15 @@
         'name' : 'keyword.operator' # arithmihic and modulo
     },
     {
+        'match' :'\\b(new|operator)\\b'
+        'name' : 'keyword.operator' # arithmihic and modulo
+    },
+    {
         #'match' : '!|&&|&|^'
         #'name' : 'keyword.operator'
     },
     {
-        'match' : '\\b(import|include|as)\\b'
+        'match' : '\\b(import|include|as|access|from)\\b'
         'name' : 'keyword.other'
     },
     {
@@ -69,7 +105,7 @@
         'name' : 'support.class'
     },
     {
-        'match' : '\\b(pi|e)\\b'
+        'match' : '\\b(pi|twopi|I)\\b'
         'name' : 'constant.language'
     },
     {
@@ -77,9 +113,16 @@
         'name' : 'constant.language'
     },
     {
-        'match' :
-            '\\b(pink|olive|black|white|orange|fuchsia|chartreuse|springgreen|purple|royalblue|Cyan|Magenta|Yellow|Black)\\b'
+        'match' : '\\b(pink|olive|black|white|orange|fuchsia|chartreuse|springgreen|purple|royalblue|Cyan|Magenta|Yellow|Black)\\b'
         'name' : 'constant.language'
+    },
+    {
+        'match': '\\b(E|NE|N|NW|W|SW|S|SE)\\b'
+        'name': 'constant.language'
+    },
+    {
+        'match': '\\b(ENE|NNE|NNW|WNW|WSW|SSW|SSE|ESE)\\b'
+        'name': 'constant.language'
     },
     {
         'match' : '\\b(\\d*)(\\.?)\\d+'

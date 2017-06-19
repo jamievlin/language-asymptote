@@ -1,5 +1,6 @@
 {
   "atom-workspace": {
-    "ctrl-alt-o": "language-asymptote:toggle"
+    "ctrl-alt-c": "language-asymptote:compile"
+
   }
 }

@@ -8,10 +8,12 @@
       "vector"
   ],
   "activationCommands": {
-    "atom-workspace": "language-asymptote:toggle"
+    "atom-workspace": "language-asymptote:toggle",
+    "atom-workspace": "language-asymptote:compile"
+
   },
-  "repository": "https://github.com/atom/language-asymptote",
-  "license": "MIT",
+  "repository": "https://github.com/supakorn-ras/language-asymptote",
+  "license": "GPLv3",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
