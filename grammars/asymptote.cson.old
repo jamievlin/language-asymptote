@@ -1,0 +1,135 @@
+#     asymptote.cson - Syntax Hightling compoenent for asymptote
+#     Copyright (C) 2017 Supakorn Rassameemasmuang
+#
+#     This program is free software: you can redistribute it and/or modify
+#     it under the terms of the GNU General Public License as published by
+#     the Free Software Foundation, either version 3 of the License, or
+#     (at your option) any later version.
+#
+#     This program is distributed in the hope that it will be useful,
+#     but WITHOUT ANY WARRANTY; without even the implied warranty of
+#     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#     GNU General Public License for more details.
+#
+#     You should have received a copy of the GNU General Public License
+#     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+'scopeName': 'source.asymptote'
+'name': 'Asymptote'
+'fileTypes': ['asy']
+
+'patterns': [
+    {
+        'match': '//.*$'
+        'name':'comment.line.double-slash'
+    },
+    {
+        'match' : '\\b(void|bool|int|real|string)\\b'
+        'name' : 'storage.type'
+    },
+    {
+        'match' : '\\b(pair|triple|transform|guide|path|pen|frame)\\b'
+        'name' : 'storage.type'
+    },
+    {
+        'match' : '\\b(picture)\\b'
+        'name' : 'storage.type'
+    },
+    {
+        'match' : '\\b(const|static|explicit|struct|typedef)\\b'
+        'name' : 'storage.modifier'
+    },
+    {
+        'begin' : '/\\*'
+        'end' : '\\*/'
+        'name' : 'comment.block'
+    },
+    {
+        'begin' : '"'
+        'end' : '"'
+        'captures' :
+            {
+                '1' : 'string.qutoed.double'
+                'end' : 'string.quoted.double'
+            }
+        'patterns' :
+            [
+                {
+                    'include' : 'text.tex.latex'
+                }
+            ]
+
+    },
+    {
+        'match' : '\'.*?\''
+        'name' : 'string.quoted.single'
+    },
+    {
+        'match' : '\\b(if|else)\\b'
+        'name' : 'keyword.control'
+    },
+    {
+        'match' : '\\b(while|for|do)\\b'
+        'name' : 'keyword.control'
+    },
+    {
+        'match' : '\\b(break|return|continue|unravel)\\b'
+        'name' : 'keyword.control'
+    },
+    {
+        'match' : '-|\\+|\\*|/|%'
+        'name' : 'keyword.operator' # arithmihic and modulo
+    },
+    {
+        'match' :'==|!=|>|>=|<=|<'
+        'name' : 'keyword.operator' # arithmihic and modulo
+    },
+    {
+        'match' :'\\b(new|operator)\\b'
+        'name' : 'keyword.operator' # arithmihic and modulo
+    },
+    {
+        #'match' : '!|&&|&|^'
+        #'name' : 'keyword.operator'
+    },
+    {
+        'match' : '\\b(import|include|as|access|from)\\b'
+        'name' : 'keyword.other'
+    },
+    {
+        'match' : '\\b(draw|label|fill|clip|dot|unitsize)\\b'
+        'name' : 'support.function'
+    },
+    {
+        'match' : '\\b(path|pen|guide)\\b'
+        'name' : 'support.class'
+    },
+    {
+        'match' : '\\b(pi|twopi|I)\\b'
+        'name' : 'constant.language'
+    },
+    {
+        'match' : '\\b(pale|light|medium|heavy|deep|dark)?(red|green|blue|gray|cyan|magenta|yellow)\\b'
+        'name' : 'constant.language'
+    },
+    {
+        'match' : '\\b(pink|olive|black|white|orange|fuchsia|chartreuse|springgreen|purple|royalblue|Cyan|Magenta|Yellow|Black)\\b'
+        'name' : 'constant.language'
+    },
+    {
+        'match': '\\b(E|NE|N|NW|W|SW|S|SE)\\b'
+        'name': 'constant.language'
+    },
+    {
+        'match': '\\b(ENE|NNE|NNW|WNW|WSW|SSW|SSE|ESE)\\b'
+        'name': 'constant.language'
+    },
+    {
+        'match' : '\\b(\\d*)(\\.?)\\d+'
+        'name' : 'constant.numeric'
+    }
+    {
+        'match' : '\\b(cycle)\\b'
+        'name' : 'keyword.other'
+    }
+]
