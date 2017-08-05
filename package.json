@@ -1,16 +1,14 @@
 {
   "name": "language-asymptote",
   "main": "./lib/language-asymptote",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "Syntax Highlighter for Asymptote",
   "keywords": [
       "asymptote",
       "vector"
   ],
   "activationCommands": {
-    "atom-workspace": "language-asymptote:toggle",
     "atom-workspace": "language-asymptote:compile"
-
   },
   "repository": "https://github.com/supakorn-ras/language-asymptote",
   "license": "GPLv3",

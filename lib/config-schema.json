@@ -1,0 +1,17 @@
+{
+    "asyPath": {
+        "title":"Path to Asymptote",
+        "type":"string",
+        "default":""
+    },
+    "asyParam": {
+        "title":"Additional Parameters for Asymptote",
+        "type":"string",
+        "default":"-outformat pdf"
+    },
+    "outputDirectory": {
+        "title":"Output Directory (None if same as *.asy source)",
+        "type":"string",
+        "default":""
+    }
+}
