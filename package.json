@@ -1,11 +1,11 @@
 {
   "name": "language-asymptote",
   "main": "./lib/language-asymptote",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Syntax Highlighter for Asymptote",
   "keywords": [
-      "asymptote",
-      "vector"
+    "asymptote",
+    "vector"
   ],
   "activationCommands": {
     "atom-workspace": "language-asymptote:compile"
@@ -15,6 +15,5 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
