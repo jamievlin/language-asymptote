@@ -1,3 +1,6 @@
+## 1.0.1
+* Add fix for Percent sign ignoring the rest of the line.
+
 ## 1.0.0
 * Added configuration and settings
 * Fixed Compile option.

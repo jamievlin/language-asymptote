@@ -13,9 +13,21 @@ def generate_base_pattern():
         },
         { 'begin' : '/\\*', 'end' : '\\*/', 'name' : 'comment.block' },
         {
-            'begin' : '"', 'end' : '"',
-            'captures' : { '1' : 'string.qutoed.double', 'end' : 'string.quoted.double' },
-            'patterns' : [{'include' : 'text.tex.latex'}]
+            'match':'([:blank:]{1}?)("{1})(.*)("{1})',
+            'name': 'string.quoted.double'
+        },
+        {
+            'begin':'([^[:blank:]]{1}?)("{1})',
+            'beginCaptures':
+                {
+                    '2': 'string.quoted.double'
+                },
+            'end':'("{1})',
+            'endCaptures':
+                {
+                    '1': 'string.quoted.double'
+                },
+            'patterns': [ {'include': 'text.tex.latex'} ]
         },
         { 'match' : '\'.*?\'', 'name' : 'string.quoted.single' },
         { 'match' :

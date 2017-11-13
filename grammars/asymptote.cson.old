@@ -45,20 +45,21 @@
         'name' : 'comment.block'
     },
     {
-        'begin' : '"'
-        'end' : '"'
-        'captures' :
+        'match':'([:blank:]{1}?)("{1})(.*)("{1})'
+        'name': 'string.quoted.double'
+    },
+    {
+        'begin':'([^[:blank:]]{1}?)("{1})'
+        'beginCaptures':
             {
-                '1' : 'string.qutoed.double'
-                'end' : 'string.quoted.double'
+                '2': 'string.quoted.double'
             }
-        'patterns' :
-            [
-                {
-                    'include' : 'text.tex.latex'
-                }
-            ]
-
+        'end':'("{1})'
+        'endCaptures':
+            {
+                '1': 'string.quoted.double'
+            }
+        'patterns': [ 'include': 'text.tex.latex' ]
     },
     {
         'match' : '\'.*?\''

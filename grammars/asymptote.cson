@@ -1,5 +1,5 @@
 #     Asymptote.cson Grammar file for Atom
-#     Generated on 2017-08-04 01:08:45.090101
+#     Generated on 2017-11-12 21:15:07.118121
 #     Do not modify this file as changes may not be saved.
 
 #     asymptote.cson - Syntax Hightling compoenent for asymptote
@@ -37,11 +37,16 @@ patterns: [
   name: 'comment.block'
  }
  {
-  begin: '\"'
-  end: '\"'
-  captures:
-   '1': 'string.qutoed.double'
-   end: 'string.quoted.double'
+  match: '([:blank:]{1}?)(\"{1})(.*)(\"{1})'
+  name: 'string.quoted.double'
+ }
+ {
+  begin: '([^[:blank:]]{1}?)(\"{1})'
+  beginCaptures:
+   '2': 'string.quoted.double'
+  end: '(\"{1})'
+  endCaptures:
+   '1': 'string.quoted.double'
   patterns: [
    {
     include: 'text.tex.latex'
@@ -69,3047 +74,11 @@ patterns: [
   name: 'constant.numeric'
  }
  {
-  match: '\\b(endScript)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(legendlinelength)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(prc)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(currentlight)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(royalblue)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(arrowdir)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(filltype)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(Suppress)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(NoAlign)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(RadialShade)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(arrowbasepoints)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(bp)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(mean)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(squarecap)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(split)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(plus)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(cputime)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(ellipse)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(inches)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(SW)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(inch)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(EndMargin)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(mediumgrey)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(darkcyan)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(legendhskip)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(addSaveFunction)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(olive)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(zerowinding)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(deepmagenta)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(margin)\\b'
-  name: 'support.function'
- }
- {
   match: '\\b(debuggerlines)\\b'
   name: 'constant.language'
  }
  {
-  match: '\\b(bbox)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(file)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(plain_bounds)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(mediumyellow)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(lastcut)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(darkgreen)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(verbatim)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(heavygray)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(markthin)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(darkred)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(E)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(plain_scaling)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(darkgray)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(orientation)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(projection)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(salmon)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(mediummagenta)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(arcdir)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(mediumcyan)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(addArrow)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(Pentype)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(gettriple)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(Yellow)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(cm)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(mediumgreen)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(heavygreen)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(dashdotted)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(diagnostics)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(deepblue)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(graphicscale)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(mediumblue)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(heavyblue)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(invert)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(NNW)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(SE)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(thick)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(mediumred)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(EndDotMargin)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(RadialShadeDraw)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(BeginDotMargin)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(Mark)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(legendmargin)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(None)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(darkolive)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(Dotted)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(math)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(needshipout)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(count)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(circle)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(updatefunction)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(beveljoin)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(orange)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(drawstrokepath)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(green)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(getint)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(embed3)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(stdin)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(unitcircle)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(DefaultHead)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(white)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(scaleT)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(baseline)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(EndPoint)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(Legend)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(exitfunction)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(unitsize)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(arrow)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(BeginArrow)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(marker)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(arrow2)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(cputimeformat)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(arcpoint)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(interior)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(fuchsia)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(brown)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(dotframe)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(deepcyan)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(dotted)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(reldir)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(pink)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(TimesRoman)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(palemagenta)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(mantissaBits)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(lightolive)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(outprefix)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(object)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(arrowbase)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(monoPen)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(CW)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(Cyan)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(EndPenMargin)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(NNE)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(Bars)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(roundjoin)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(lightgray)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(startScript)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(MidPoint)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(Embed)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(deepgrey)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(lightyellow)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(box)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(Bookman)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(fit)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(Margin)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(NoSide)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(stdout)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(Seascape)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(up)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(ZapfChancery)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(left)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(prconly)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(deepgreen)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(lightmagenta)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(bracedefaultratio)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(Scale)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(getstring)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(DotMargins)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(pairs)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(eval)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(Arrow)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(MarkPath)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(deepgray)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(defaultformat)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(lightcyan)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(paleblue)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(align)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(scaleless)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(thin)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(arcarrowangle)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(restoredefaults)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(longdashdotted)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(usepackage)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(dashed)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(copyPairOrTriple)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(TeXify)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(graphic)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(Portrait)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(braceinnerangle)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(JOIN_IN)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(barfactor)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(lightgreen)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(EndArrow)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(endl)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(filloutside)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(usersetting)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(prc0)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(rectify)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(TeXHead)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(beep)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(labelmargin)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(lightblue)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(bracemidangle)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(unitsquare)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(cyan)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(grey)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(rotation)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(W)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(magenta)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(WSW)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(nobasealign)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(Landscape)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(camerafactor)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(lightred)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(trim)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(DotMargin)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(squarepen)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(deepyellow)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(barsize)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(AvantGarde)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(circleprecision)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(Black)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(report)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(Pen)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(ENE)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(Courier)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(makedraw)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(drawarrow)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(down)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(arc)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(right)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(outformat)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(Fill)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(ArcArrows)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(Palatino)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(intersectionpoints)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(drawarrow2)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(expansionfactor)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(BeginPoint)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(arrowhookfactor)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(ask)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(fit2)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(indexedTransform)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(finite)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(UnFill)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(I)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(SSW)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(Slant)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(ArcArrow)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(intersectionpoint)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(Symbol)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(fixedscaling)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(getreal)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(sourceline)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(darkbrown)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(buildRestoreDefaults)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(arrow2sizelimit)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(FillDraw)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(pause)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(ocgindex)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(springgreen)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(savedefaults)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(MidArrow)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(heavygrey)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(markuniform)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(circlescale)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(ignore)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(darkblue)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(bar)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(JOIN_OUT)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(currentprojection)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(arrowsizelimit)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(endpoint)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(HookHead)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(concat)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(firstcut)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(UpsideDown)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(viewportmargin)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(nullpen)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(save)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(reltime)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(marknodes)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(dotfactor)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(palecyan)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(BeginMargin)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(buildcycle)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(arcarrowsize)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(calculateScaling)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(activatequote)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(undefined)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(roundcap)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(buildRestoreThunk)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(overloadedMessage)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(currentpatterns)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(arrowfactor)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(heavyred)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(black)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(Draw)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(tab)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(CCW)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(usetypescript)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(randompath)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(array)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(uniform)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(viewportsize)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(legenditem)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(currentpicture)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(palegreen)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(BeginArcArrow)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(hsv)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(EndBar)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(enclose)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(N)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(relative)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(Label)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(dotsize)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(pt)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(settings)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(MoveQuiet)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(WNW)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(palegray)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(miterjoin)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(SimpleHead)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(arrowangle)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(Rotate)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(inXasyMode)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(progress)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(arcarrowfactor)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(mm)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(pack)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(plain)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(CTZ)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(NOT)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(XOR)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(OR)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(scale3)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(AND)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(cubicroots)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(attach)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(quadraticroots)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(strokepath)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(erf)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(Yn)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(Jn)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(light)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(remainder)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(choose)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(hypot)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(Round)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(Ceil)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(BeginPenMargin)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(round)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(floor)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(extendcap)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(ceil)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(rand)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(sgn)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(quotient)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(insphere)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(path3)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(incircle)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(atan2)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(inside)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(erfc)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(windingnumber)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(relativedistance)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(file3)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(maxtimes)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(mintimes)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(maxAfterTransform)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(minAfterTransform)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(extension)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(intersections)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(intersect)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(dirtime)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(arctime)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(Relative)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(Margins)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(truepoint)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(arclength)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(piecewisestraight)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(nurb)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(subpath)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(radius)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(accel)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(precontrol)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(defaultfilename)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(longitude)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(NoFill)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(colatitude)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(nomarker)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(beginpoint)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(azimuth)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(polar)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(zpart)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(bezierPPP)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(SSE)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(bezierP)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(TrueMargin)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(bezier)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(realmult)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(Floor)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(gamma)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(expi)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(dir)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(aTan)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(aCos)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(aSin)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(arrowsize)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(Tan)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(Cos)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(legend)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(Degrees)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(radians)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(angle)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(Center)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(ypart)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(xpart)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(seconds)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(rgba)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(time)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(string)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(ascii)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(RightSide)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(replace)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(lightgrey)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(upcase)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(mediumgray)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(downcase)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(substr)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(insert)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(rfind)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(purge)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(animate)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(convert)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(sqrtEpsilon)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(stripextension)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(stripfile)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(stripdirectory)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(warning)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(S)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(nowarn)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(warn)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(breakpoints)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(stop)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(locatefile)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(breakpoint)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(atbreakpoint)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(phantom)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(atexit)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(atupdate)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(outname)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(mktemp)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(rename)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(arrowbarb)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(yellow)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(delete)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(seekeof)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(heavymagenta)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(PenMargins)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(newl)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(seek)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(Arrows)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(tell)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(DOSendl)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(debugger)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(getc)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(flush)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(blue)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(evenodd)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(precision)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(close)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(clear)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(unfill)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(Bar)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(eol)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(eof)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(paleyellow)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(output)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(input)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(bezierPP)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(_projection)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(maxbezier)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(minbezier)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(legendvskip)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(darkmagenta)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(change2)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(NW)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(norm)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(triangulate)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(shipped)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(fft)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(simpson)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(colorPen)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(_findroot)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(newton)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(tridiagonal)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(filldraw)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(dot)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(ESE)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(project)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(AtA)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(solve)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(BeginBar)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(perp)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(find)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(degrees)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(sequence)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(complement)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(saveline)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(readline)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(unitrand)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(history)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(_strokepath)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(textpath)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(NoMargin)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(_texpath)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(SuppressQuiet)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(texsize)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(labels)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(cut)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(is3D)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(transformation)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(maxratio)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(minratio)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(size3)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(max3)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(unit)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(min3)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(drawpixel)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(drawPRCtube)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(begin)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(drawPRCdisk)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(CLZ)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(drawPRCsphere)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(spinner)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(times)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(drawbeziertriangle)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(draw)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(deconstruct)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(shipout3)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(debugging)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(shipout)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(asy)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(latex)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(nativeformat)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(unstraighten)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(_image)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(layer)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(texreset)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(_labelpath)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(arrowtexfactor)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(comma)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(deletepreamble)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(version)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(nosetpagesize)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(texpreamble)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(braceouterangle)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(tex)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(prepend)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(add)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(endgroup3)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(_begingroup3)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(endgroup)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(begingroup)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(exitXasyMode)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(MidArcArrow)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(grestore)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(drawPRCcylinder)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(beginclip)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(palegrey)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(clip)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(Allow)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(determinant)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(functionshade)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(EndArcArrow)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(tensorshade)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(gouraudshade)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(getpair)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(axialshade)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(chartreuse)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(latticeshade)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(fill)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(_draw)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(initdefaults)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(erase)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(jobname)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(print_random_addresses)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(generate_random_backtrace)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(Helvetica)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(reflect)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(rotate)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(IgnoreAspect)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(postscript)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(slant)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(yscale)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(inverse)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(darkgrey)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(xscale)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(shiftless)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(_cputime)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(reverse)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(curlSpecifier)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(Blank)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(tensionSpecifier)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(default)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(controlSpecifier)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(red)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(dirSpecifier)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(longdashed)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(point)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(length)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(size)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(texify)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(controls)\\b'
-  name: 'keyword.operator'
- }
- {
-  match: '\\b(empty)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(tension)\\b'
-  name: 'keyword.operator'
- }
- {
-  match: '\\b(end)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(curl)\\b'
-  name: 'keyword.operator'
- }
- {
-  match: '\\b(spec)\\b'
-  name: 'keyword.operator'
- }
- {
-  match: '\\b(list)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(cd)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(Move)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(location)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(pdf)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(_eval)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(usleep)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(sleep)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(Sin)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(assert)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(Align)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(exit)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(abort)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(locale)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(defaultseparator)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(asydir)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(view)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(system)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(interactive)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(colorless)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(straight)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(makepen)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(nib)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(transform)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(relpoint)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(transpose)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(overwrite)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(lineskip)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(fontsize)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(font)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(newpage)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(fontcommand)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(linewidth)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(arrowlength)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(miterlimit)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(linecap)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(adjust)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(scale)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(Shift)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(fmod)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(offset)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(orient)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(linetype)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(blend)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(endclip)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(opacity)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(fillrule)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(identity4)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(MarkFill)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(pattern)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(solid)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(colorspace)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(byte)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(Aspect)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(hex)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(colors)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(DOSnewl)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(cmyk)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(rgb)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(gray)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(invisible)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(defaultpen)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(resetdefaultpen)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(isnan)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(cyclic)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(printBytecode)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(currentpen)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(VERSION)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(alias)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(pi)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(initXasyMode)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(randMax)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(heavycyan)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(PenMargin)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(realDigits)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(realEpsilon)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(NE)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(realMin)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(realMax)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(nan)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(infinity)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(inf)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(intMin)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(intMax)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(palered)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(map)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(identity)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(pow10)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(linejoin)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(ldexp)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(log1p)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(brace)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(deactivatequote)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(format)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(expm1)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(label)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(fabs)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(stripsuffix)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(cbrt)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(sqrt)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(all)\\b'
-  name: 'support.function'
- }
- {
   match: '\\b(atanh)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(acosh)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(shift)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(asinh)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(ZapfDingbats)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(tanh)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(cosh)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(sinh)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(straightness)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(log10)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(midpoint)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(exp)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(purple)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(italic)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(atan)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(acos)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(roundbox)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(asin)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(tan)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(Magenta)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(cos)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(sin)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(polygon)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(none)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(factorial)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(log)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(tuple)\\b'
-  name: 'keyword.operator'
- }
- {
-  match: '\\b(diagonal)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(texpath)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(uptodate)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(search)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(sort)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(postcontrol)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(max)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(restore)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(basealign)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(min)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(srand)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(xformStack)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(conj)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(LeftSide)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(nullpath)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(copy)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(abs)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(radialshade)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(maxbound)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(minbound)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(interp)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(latitude)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(sum)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(initialized)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(gsave)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(write)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(NewCenturySchoolBook)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(saveFunctions)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(minipage)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(legendmaxrelativewidth)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(cross)\\b'
-  name: 'support.function'
- }
- {
-  match: '\\b(deepred)\\b'
-  name: 'constant.language'
- }
- {
-  match: '\\b(error)\\b'
   name: 'support.function'
  }
  {
@@ -3125,11 +94,19 @@ patterns: [
   name: 'storage.type'
  }
  {
+  match: '\\b(string)\\b'
+  name: 'storage.type'
+ }
+ {
   match: '\\b(pair)\\b'
   name: 'storage.type'
  }
  {
   match: '\\b(triple)\\b'
+  name: 'storage.type'
+ }
+ {
+  match: '\\b(transform)\\b'
   name: 'storage.type'
  }
  {
@@ -3141,6 +118,10 @@ patterns: [
   name: 'storage.type'
  }
  {
+  match: '\\b(path3)\\b'
+  name: 'storage.type'
+ }
+ {
   match: '\\b(pen)\\b'
   name: 'storage.type'
  }
@@ -3149,11 +130,11 @@ patterns: [
   name: 'storage.type'
  }
  {
-  match: '\\b(slice)\\b'
+  match: '\\b(file)\\b'
   name: 'storage.type'
  }
  {
-  match: '\\b(picture)\\b'
+  match: '\\b(indexedTransform)\\b'
   name: 'storage.type'
  }
  {
@@ -3161,11 +142,7 @@ patterns: [
   name: 'storage.type'
  }
  {
-  match: '\\b(pairOrTriple)\\b'
-  name: 'storage.type'
- }
- {
-  match: '\\b(processtime)\\b'
+  match: '\\b(hsv)\\b'
   name: 'storage.type'
  }
  {
@@ -3173,31 +150,7 @@ patterns: [
   name: 'storage.type'
  }
  {
-  match: '\\b(bool3)\\b'
-  name: 'storage.type'
- }
- {
-  match: '\\b(coord)\\b'
-  name: 'storage.type'
- }
- {
-  match: '\\b(ScaleT)\\b'
-  name: 'storage.type'
- }
- {
-  match: '\\b(autoscaleT)\\b'
-  name: 'storage.type'
- }
- {
-  match: '\\b(arrowhead)\\b'
-  name: 'storage.type'
- }
- {
-  match: '\\b(coords3)\\b'
-  name: 'storage.type'
- }
- {
-  match: '\\b(framedTransformStack)\\b'
+  match: '\\b(Legend)\\b'
   name: 'storage.type'
  }
  {
@@ -3205,7 +158,27 @@ patterns: [
   name: 'storage.type'
  }
  {
+  match: '\\b(filltype)\\b'
+  name: 'storage.type'
+ }
+ {
+  match: '\\b(picture)\\b'
+  name: 'storage.type'
+ }
+ {
+  match: '\\b(slice)\\b'
+  name: 'storage.type'
+ }
+ {
   match: '\\b(position)\\b'
+  name: 'storage.type'
+ }
+ {
+  match: '\\b(framedTransformStack)\\b'
+  name: 'storage.type'
+ }
+ {
+  match: '\\b(projection)\\b'
   name: 'storage.type'
  }
  {
@@ -3213,11 +186,3043 @@ patterns: [
   name: 'storage.type'
  }
  {
+  match: '\\b(pairOrTriple)\\b'
+  name: 'storage.type'
+ }
+ {
+  match: '\\b(coords3)\\b'
+  name: 'storage.type'
+ }
+ {
+  match: '\\b(Label)\\b'
+  name: 'storage.type'
+ }
+ {
+  match: '\\b(scaleT)\\b'
+  name: 'storage.type'
+ }
+ {
+  match: '\\b(bool3)\\b'
+  name: 'storage.type'
+ }
+ {
+  match: '\\b(transformation)\\b'
+  name: 'storage.type'
+ }
+ {
+  match: '\\b(marker)\\b'
+  name: 'storage.type'
+ }
+ {
+  match: '\\b(ScaleT)\\b'
+  name: 'storage.type'
+ }
+ {
+  match: '\\b(processtime)\\b'
+  name: 'storage.type'
+ }
+ {
+  match: '\\b(arrowhead)\\b'
+  name: 'storage.type'
+ }
+ {
+  match: '\\b(coord)\\b'
+  name: 'storage.type'
+ }
+ {
   match: '\\b(marginT)\\b'
   name: 'storage.type'
  }
  {
-  match: '---|\\^\\^|!|::|--|\\.\\.|#|%|>|>=|<=|<|/|\\*|-|!=|==|\\^|\\||&|\\+'
+  match: '\\b(autoscaleT)\\b'
+  name: 'storage.type'
+ }
+ {
+  match: '\\b(align)\\b'
+  name: 'storage.type'
+ }
+ {
+  match: '\\b(light)\\b'
+  name: 'storage.type'
+ }
+ {
+  match: '\\b(object)\\b'
+  name: 'storage.type'
+ }
+ {
+  match: '\\b(cputime)\\b'
+  name: 'storage.type'
+ }
+ {
+  match: '\\b(mintimes)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(deconstruct)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(eof)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(Seascape)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(atupdate)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(write)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(beep)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(initialized)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(palecyan)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(sum)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(interp)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(lightblue)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(minbound)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(maxbound)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(abs)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(arcpoint)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(conj)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(mediumred)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(seconds)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(min)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(max)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(sort)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(xformStack)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(deepgreen)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(search)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(deactivatequote)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(diagonal)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(tuple)\\b'
+  name: 'keyword.operator'
+ }
+ {
+  match: '\\b(mediumgrey)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(insphere)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(sin)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(cos)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(tan)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(asin)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(acos)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(atan)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(exp)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(log)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(markthin)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(log10)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(sinh)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(blue)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(cosh)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(beginclip)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(shiftless)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(tanh)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(asinh)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(UpsideDown)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(acosh)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(NNE)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(sqrt)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(E)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(cbrt)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(_image)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(fabs)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(NoAlign)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(WNW)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(expm1)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(log1p)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(ldexp)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(pow10)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(debugger)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(identity)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(map)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(plain_bounds)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(realmult)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(intMax)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(stdout)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(arrow2)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(intMin)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(inf)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(latitude)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(infinity)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(nan)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(usepackage)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(realMax)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(realMin)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(azimuth)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(realEpsilon)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(realDigits)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(filloutside)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(latex)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(randMax)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(pi)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(VERSION)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(currentpen)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(interactive)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(printBytecode)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(isnan)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(right)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(nosetpagesize)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(jobname)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(resetdefaultpen)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(aCos)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(defaultpen)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(heavyblue)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(invisible)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(gray)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(rgb)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(cmyk)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(colors)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(box)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(hex)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(drawPRCtube)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(erase)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(byte)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(Arrow)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(fontcommand)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(colorspace)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(norm)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(pattern)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(getstring)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(fillrule)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(bezierP)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(opacity)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(blend)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(unitrand)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(insert)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(linetype)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(offset)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(triangulate)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(scale)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(adjust)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(activatequote)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(currentpicture)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(linecap)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(linejoin)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(remainder)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(miterlimit)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(stripextension)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(linewidth)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(close)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(font)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(arcdir)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(fontsize)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(magenta)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(lineskip)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(overwrite)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(layer)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(basealign)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(nib)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(mediumgray)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(fft)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(makepen)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(graphicscale)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(getc)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(colorless)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(uptodate)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(system)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(view)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(arrowsize)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(makedraw)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(asydir)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(deepgray)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(locale)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(abort)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(exit)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(assert)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(sleep)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(NE)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(usleep)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(dotframe)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(_eval)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(location)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(cd)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(RadialShade)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(needshipout)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(list)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(spec)\\b'
+  name: 'keyword.operator'
+ }
+ {
+  match: '\\b(white)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(postcontrol)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(curl)\\b'
+  name: 'keyword.operator'
+ }
+ {
+  match: '\\b(expi)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(tension)\\b'
+  name: 'keyword.operator'
+ }
+ {
+  match: '\\b(controls)\\b'
+  name: 'keyword.operator'
+ }
+ {
+  match: '\\b(legendlinelength)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(labels)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(size)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(buildRestoreDefaults)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(length)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(cyclic)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(point)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(unitcircle)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(dirSpecifier)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(controlSpecifier)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(tensionSpecifier)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(Scale)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(curlSpecifier)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(tab)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(reverse)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(_cputime)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(begin)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(shift)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(breakpoint)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(inverse)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(xscale)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(rgba)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(yscale)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(Center)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(midpoint)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(stripfile)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(slant)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(truepoint)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(rotate)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(reflect)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(generate_random_backtrace)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(arrowlength)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(print_random_addresses)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(empty)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(stripsuffix)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(_draw)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(fill)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(filldraw)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(latticeshade)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(axialshade)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(radialshade)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(gouraudshade)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(buildcycle)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(tensorshade)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(plain_scaling)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(functionshade)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(clip)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(endclip)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(gsave)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(nullpath)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(grestore)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(begingroup)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(endgroup)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(_begingroup3)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(endgroup3)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(overloadedMessage)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(add)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(prepend)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(postscript)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(arrowbasepoints)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(darkmagenta)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(tex)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(texpreamble)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(deletepreamble)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(currentprojection)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(Sin)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(_labelpath)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(zpart)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(texreset)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(newpage)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(Blank)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(nativeformat)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(pdf)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(history)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(shipout)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(marknodes)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(shipout3)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(nowarn)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(draw)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(rand)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(drawbeziertriangle)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(drawPRCsphere)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(drawPRCcylinder)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(drawPRCdisk)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(drawpixel)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(min3)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(prconly)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(max3)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(comma)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(size3)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(TrueMargin)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(minratio)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(maxratio)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(is3D)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(erf)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(label)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(MidArrow)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(texsize)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(ZapfDingbats)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(_texpath)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(textpath)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(strokepath)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(_strokepath)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(readline)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(saveline)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(complement)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(startScript)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(erfc)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(sequence)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(all)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(mediumcyan)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(BeginMargin)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(find)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(solve)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(determinant)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(input)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(AtA)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(Dotted)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(project)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(polygon)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(dot)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(tridiagonal)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(newton)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(_findroot)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(simpson)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(dir)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(output)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(change2)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(minbezier)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(maxbezier)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(_projection)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(eol)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(error)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(olive)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(clear)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(legenditem)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(precision)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(flush)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(tell)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(seek)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(dashdotted)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(seekeof)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(delete)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(rename)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(addSaveFunction)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(mktemp)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(outname)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(atexit)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(atbreakpoint)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(exitfunction)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(locatefile)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(lastcut)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(cross)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(stop)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(breakpoints)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(warn)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(warning)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(stripdirectory)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(convert)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(animate)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(purge)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(lightyellow)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(rfind)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(substr)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(downcase)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(upcase)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(replace)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(format)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(lightred)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(transpose)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(ascii)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(time)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(squarecap)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(xpart)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(squarepen)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(ypart)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(angle)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(degrees)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(radians)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(Landscape)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(Degrees)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(paleblue)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(Cos)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(MarkPath)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(Tan)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(radius)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(aSin)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(aTan)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(unit)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(gamma)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(bezier)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(bezierPP)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(bezierPPP)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(settings)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(polar)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(colatitude)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(longitude)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(end)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(perp)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(precontrol)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(EndBar)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(accel)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(subpath)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(nurb)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(straight)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(unstraighten)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(piecewisestraight)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(arclength)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(diagnostics)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(arctime)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(embed3)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(dirtime)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(intersect)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(DefaultHead)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(intersections)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(RightSide)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(extension)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(bracemidangle)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(minAfterTransform)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(NoFill)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(maxAfterTransform)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(left)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(maxtimes)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(save)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(relativedistance)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(windingnumber)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(inside)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(orient)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(cyan)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(incircle)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(straightness)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(quotient)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(sgn)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(srand)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(mediumgreen)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(ceil)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(floor)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(round)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(Ceil)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(arrowhookfactor)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(Floor)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(Round)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(fmod)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(atan2)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(down)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(hypot)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(UnFill)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(Jn)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(Shift)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(Yn)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(factorial)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(choose)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(quadraticroots)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(cubicroots)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(sourceline)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(AND)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(OR)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(XOR)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(NOT)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(times)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(concat)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(CLZ)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(CTZ)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(report)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(plain)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(calculateScaling)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(firstcut)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(mm)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(outformat)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(inXasyMode)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(alias)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(lightmagenta)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(intersectionpoints)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(arrowangle)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(palegray)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(NoMargin)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(fuchsia)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(grey)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(MoveQuiet)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(array)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(dotsize)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(italic)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(MidArcArrow)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(N)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(I)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(EndArcArrow)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(darkred)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(cputimeformat)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(palegreen)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(viewportsize)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(palered)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(randompath)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(unitsize)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(default)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(MarkFill)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(Align)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(copy)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(SW)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(texify)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(black)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(arrowfactor)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(Pentype)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(EndDotMargin)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(palegrey)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(purple)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(currentpatterns)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(buildRestoreThunk)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(TeXify)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(cut)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(undefined)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(brace)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(getpair)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(SuppressQuiet)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(legend)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(ArcArrow)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(dotfactor)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(newl)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(Aspect)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(ArcArrows)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(nullpen)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(evenodd)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(prc0)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(viewportmargin)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(SimpleHead)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(endpoint)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(shipped)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(arrowsizelimit)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(Helvetica)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(inches)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(reldir)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(darkblue)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(ignore)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(circlescale)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(springgreen)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(restore)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(markuniform)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(FillDraw)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(legendmaxrelativewidth)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(arrow2sizelimit)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(mediummagenta)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(arrow)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(darkbrown)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(math)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(getreal)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(saveFunctions)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(arrowbarb)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(intersectionpoint)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(Slant)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(bp)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(SSW)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(S)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(BeginPoint)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(attach)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(Black)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(finite)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(ocgindex)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(expansionfactor)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(Palatino)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(solid)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(file3)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(arrowtexfactor)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(Fill)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(arc)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(Bar)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(reltime)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(drawarrow)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(Draw)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(Courier)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(ENE)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(Pen)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(savedefaults)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(fit)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(paleyellow)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(beginpoint)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(mediumyellow)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(drawstrokepath)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(circleprecision)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(prc)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(AvantGarde)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(margin)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(Allow)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(minipage)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(barsize)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(bar)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(DotMargin)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(nobasealign)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(WSW)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(W)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(scale3)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(unitsquare)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(relpoint)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(relative)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(TeXHead)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(usersetting)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(endl)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(addArrow)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(lightgreen)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(BeginBar)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(DOSnewl)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(barfactor)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(JOIN_IN)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(exitXasyMode)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(braceinnerangle)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(unfill)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(graphic)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(pause)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(dashed)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(restoredefaults)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(orientation)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(arcarrowangle)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(thin)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(JOIN_OUT)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(scaleless)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(NewCenturySchoolBook)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(none)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(braceouterangle)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(lightcyan)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(defaultformat)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(arcarrowfactor)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(DotMargins)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(deepred)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(nomarker)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(bracedefaultratio)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(invert)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(ZapfChancery)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(CW)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(Cyan)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(usetypescript)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(legendmargin)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(up)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(progress)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(Margin)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(deepgrey)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(roundcap)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(DOSendl)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(legendvskip)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(Rotate)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(Embed)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(MidPoint)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(lightgray)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(roundjoin)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(Bars)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(Symbol)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(IgnoreAspect)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(Arrows)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(rotation)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(arrowbase)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(LeftSide)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(Bookman)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(lightolive)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(mantissaBits)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(enclose)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(palemagenta)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(TimesRoman)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(split)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(ellipse)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(pink)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(texpath)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(BeginArrow)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(PenMargin)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(endScript)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(mean)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(deepcyan)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(dotted)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(outprefix)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(brown)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(copyPairOrTriple)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(lightgrey)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(fixedscaling)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(Move)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(interior)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(Margins)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(pt)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(bbox)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(ESE)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(defaultseparator)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(initdefaults)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(roundbox)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(EndPoint)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(updatefunction)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(baseline)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(deepyellow)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(yellow)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(arcarrowsize)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(BeginArcArrow)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(stdin)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(HookHead)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(getint)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(green)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(labelmargin)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(PenMargins)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(orange)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(beveljoin)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(defaultfilename)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(circle)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(extendcap)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(BeginPenMargin)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(count)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(drawarrow2)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(darkolive)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(SSE)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(Mark)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(BeginDotMargin)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(RadialShadeDraw)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(NoSide)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(Magenta)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(heavyred)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(thick)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(CCW)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(SE)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(sqrtEpsilon)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(chartreuse)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(EndPenMargin)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(NNW)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(phantom)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(mediumblue)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(deepblue)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(None)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(longdashed)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(trim)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(uniform)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(camerafactor)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(heavygreen)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(debugging)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(identity4)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(cm)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(Relative)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(colorPen)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(NW)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(eval)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(Yellow)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(miterjoin)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(gettriple)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(heavycyan)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(salmon)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(initXasyMode)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(darkgray)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(heavymagenta)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(darkgreen)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(heavygray)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(verbatim)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(longdashdotted)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(deepmagenta)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(darkgrey)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(heavygrey)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(zerowinding)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(version)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(pack)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(legendhskip)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(darkcyan)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(EndArrow)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(EndMargin)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(inch)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(ask)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(pairs)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(red)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(plus)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(Portrait)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(monoPen)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(Suppress)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(fit2)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(spinner)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(arrowdir)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(royalblue)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(currentlight)\\b'
+  name: 'constant.language'
+ }
+ {
+  match: '\\b(rectify)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\b(asy)\\b'
+  name: 'support.function'
+ }
+ {
+  match: '\\+|&|\\||\\^|==|!=|-|\\*|/|<|<=|>=|>|%|#|\\.\\.|--|!|---|\\^\\^|::'
   name: 'keyword.operator'
  }
 ]
